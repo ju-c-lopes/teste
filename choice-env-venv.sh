@@ -1,8 +1,11 @@
 # Verificar se é o terminal integrado do VSCODE
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
-    # O usuário deve trocar <interpretador> por seu interpretador anaconda default do vscode
+    # O usuário deve trocar <nome-ambiente> por seu interpretador anaconda default do vscode
     echo "vscode"
-    . <nome-ambiente>/bin/activate
+    vscode_env_path="vscode"
+    if [ -d $vscode_env_path ]; then
+        . "$vscode_env_path"/bin/activate
+    fi
 else
     # Busca por ambientes virtuais a partir da home
     listenv=()
