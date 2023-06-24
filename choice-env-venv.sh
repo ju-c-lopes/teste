@@ -2,7 +2,7 @@
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
     # O usuário deve trocar <nome-ambiente> por seu interpretador anaconda default do vscode
     echo "vscode"
-    vscode_env_path="vscode"
+    vscode_env_path="<nome-ambiente>"
     if [ -d $vscode_env_path ]; then
         . "$vscode_env_path"/bin/activate
     fi
